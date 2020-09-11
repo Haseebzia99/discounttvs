@@ -11,7 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2020_09_11_155101) do
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +20,10 @@ ActiveRecord::Schema.define(version: 2020_09_11_155101) do
     t.integer "size"
     t.integer "year"
     t.integer "price"
+    t.text "description"
+    t.integer "price"
+    t.integer "year"
+    t.integer "size"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
