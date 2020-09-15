@@ -29,7 +29,19 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
-// Specific CSS for your home-page
+
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gh-best-tv-brands-1587581394.png?crop=0.853xw:0.657xh;0.0733xw,0.165xh&resize=1200:*');
+  height: 33%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .card-trip {
   overflow: hidden;
