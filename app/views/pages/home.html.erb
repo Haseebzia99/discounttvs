@@ -9,13 +9,25 @@
   </div>
 </div>
 
+<div class="orderprocess text-justify mt-4">
+<h1>ORDER PROCESS</h1>
 <%= render 'shared/cardhome' %>
+</div>
 
 <% @tvs.each do |t| %>
 <h2><%= t.name %></h2>
 <h2><%= t.size %></h2>
 <% end %>
 <%= Date.today %>
+
+<div class="parallax"></div>
+<div id="style="height:100px;background-color:transparent;font-size:18px">
+<br><br><br>
+<h1>Some text</h1>
+<br><br><br>
+</div>
+<div class="parallax"></div>
+
 </body>
 
 </html>
