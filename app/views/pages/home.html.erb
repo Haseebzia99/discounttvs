@@ -1,3 +1,6 @@
+<html>
+
+<body>
 <div class="banner">
   <div class="container">
     <h1>ORDER TODAY...</h1>
@@ -6,8 +9,13 @@
   </div>
 </div>
 
+<%= render 'shared/cardhome' %>
+
 <% @tvs.each do |t| %>
 <h2><%= t.name %></h2>
-<h2><%= t.price %></h2>
+<h2><%= t.size %></h2>
 <% end %>
 <%= Date.today %>
+</body>
+
+</html>
