@@ -9,15 +9,19 @@
   </button>
 </div>
 
-    <div class="navbar-headings-center text-center">
-      <div class="nav-item">
-        <%= link_to "Home", root_path, class: "nav-link" %>
-        <%= link_to "Shop", root_path, class: "nav-link" %>
-        <%= link_to "About Us", root_path, class: "nav-link" %>
-        <%= link_to "Contact", root_path, class: "nav-link" %>
 
-      </div>
+
+  <div class="navbar-headings-center text-center">
+    <div class="nav-item">
+      <%= link_to "Home", root_path, class: "nav-link" %>
+      <%= link_to "Shop", tvs_path, class: "nav-link" %>
+      <%= link_to "About Us", root_path, class: "nav-link" %>
+      <%= link_to "Contact", root_path, class: "nav-link" %>
+      <%= link_to 'log out', destroy_user_session_path, class: "nav-link", method: :delete %>
     </div>
+  </div>
+
+
 
 
   <div class="nav-items">
