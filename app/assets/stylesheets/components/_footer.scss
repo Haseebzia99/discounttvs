@@ -1,0 +1,54 @@
+.footer {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(0,0,0,0.3);
+  width: 100vw;
+  margin-right: 30px;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: darkgrey;
+}
+.footer-links a {
+  color: orange;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 40px;
+}
+.footer-links a:hover {
+  color: lightgrey;
+}
+
+.details {
+list-style-type: none;
+color: white;
+// font-family: montserrat;
+font-size: 18px;
+margin: 16px;
+}
+
+.min-height {
+  min-height: calc(100vh - 64px - 115px);
+}
+
+.aligned {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120vw;
+  color: white;
+}
+
+.aligned :hover {
+color : orange;
+
+}
+
+#creditcards {
+  margin-left: 200px;
+  margin-top: 8px;
+}

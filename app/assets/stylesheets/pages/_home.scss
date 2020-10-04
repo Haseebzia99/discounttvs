@@ -1,26 +1,33 @@
 @keyframes fader {
-  0% {background: url("https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")}
-  16.67% {background: url("https://images.unsplash.com/photo-1539786774582-0707555f1f72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80")}
-  33.34% {background: url("https://images.unsplash.com/photo-1544476333-4982d8f6c688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80")}
-  50.01% {background: url("https://images.unsplash.com/photo-1593784991188-c899ca07263b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")}
-  66.68% {background: url("https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1553&q=80")}
-  83.35% {background: url("https://images.unsplash.com/photo-1461151304267-38535e780c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80")}
-  100% {background: url("https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")}
+  0% {background: url("https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2380&q=80")}
+  16.67% {background: url("https://images.unsplash.com/photo-1501360575895-3f3f2639fd74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80")}
+  33.34% {background: url("https://www.bluestarcooking.com/wp-content/uploads/2016/07/Header_SealedBurner.jpg")}
+  50.01% {background: url("https://www.andrewselectrical.co.uk/media/orbitslider/image/a/e/aeg-banner-washing-machines.jpg")}
+  66.68% {background: url("https://www.tsmsouth.com/wp-content/uploads/2018/07/maintenance-banner.jpg")}
+  83.35% {background: url("https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg")}
+  100% {background: url("https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2380&q=80")}
 }
 
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 100px 0;
   animation: fader 20s cubic-bezier(.8,0,0,.8) infinite;
+  height: 600px;
 }
 
 .banner h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
+  font-family: montserrat;
+}
+
+.banner h2 {
+  color: white;
+  font-family: raleway;
 }
 
 .banner p {
@@ -32,11 +39,16 @@
 
 body, html {
   height: 100%;
+  font-family: montserrat;
+}
+
+.trustpilot img  {
+  width: 100px;
 }
 
 .parallax {
-  background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gh-best-tv-brands-1587581394.png?crop=0.853xw:0.657xh;0.0733xw,0.165xh&resize=1200:*');
-  height: 33%;
+  background-image: url('https://images.unsplash.com/photo-1567602901358-5ba00815eb15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
+  height: 44%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,3 +91,49 @@ body, html {
   top: -20px;
   width: 40px;
 }
+
+.selected-item {
+    background-color: #fff;
+    line-height: 38px;
+    margin-bottom: 15px;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+body {
+  background-color: white;
+}
+
+
+.threestep {
+  margin-top: 80px;
+
+}
+
+.fas {
+  text-align: center;
+}
+
+#carouselExampleIndicators {
+  // height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+//grid
+
+.reviews-container{
+  margin-top: 200px;
+}
+
+.slogan{
+  margin-top: 100px;
+}
+

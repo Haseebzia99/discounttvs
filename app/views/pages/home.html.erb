@@ -1,33 +1,76 @@
 <html>
 <body>
+
 <div class="banner">
-  <div class="container">
-    <h1>ORDER TODAY...</h1>
-    <h1>PAY ON DELIVERY DAY!</h1>
-    <a class="btn btn-primary" href="#">Apply now</a>
+    <div class="reviews-container">
+      <div id="carouselExampleIndicators" class="carousel slide bg-transparent" data-ride="carousel">
+        <div class="carousel-inner">
+          <!-- for every review, we are going to iterate over and if its the first review, then give it the active class otherwise its not active. (needs to be active, because additional JS is being run in the background for each carosel) -->
+          <% @reviews.each_with_index do |review, index| %>
+            <div class="carousel-item carclique-carosel-slide text-center <%= index == 0 ? 'active' : '' %>">
+              <h1><%= review[:name] %></h1>
+              <h2><%= review[:content] %></h2>
+            </div>
+          <% end %>
+        </div>
+      </div>
+  </div>
+  <div class="slogan">
+  <h1 class="text-center">ORDER TODAY.. <strong>PAY ON DELIVERY DAY</strong></h1>
+    <div class="row justify-content-center mt-3">
+      <button type="button" class="btn btn-primary"><%= link_to "Shop Now!", tvs_path %></button>
+    </div>
   </div>
 </div>
 
-<div class="orderprocess text-justify mt-4">
-<h1>ORDER PROCESS</h1>
-<%= render 'shared/cardhome' %>
+<h2 class="text-center mt-3">Search for your new TV here</h2>
+<div class="orderprocess m-1 row justify-content-center">
+  <%= render 'shared/search' %>
 </div>
 
-<% @tvs.each do |t| %>
-<h2><%= t.name %></h2>
-<h2><%= t.size %></h2>
-<% end %>
-<%= Date.today %>
-
-<div class="parallax"></div>
-<div id="style="height:100px;background-color:transparent;font-size:18px">
-<br><br><br>
-<h1>Some text</h1>
-<%= render 'shared/search' %>
-<br><br><br>
+<h2>Our Latest Offers</h2>
+<!-- <div class="offers text-center m-3 d-flex">
+ -->
+<!--       <div class="div1">
+        <img src="https://www.ikea.com/gb/en/images/products/brimnes-tv-bench-black__0850581_PE725298_S5.JPG?f=s" alt="">
+      </div>
+      <div class="div2">
+        <img src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2020/03/26/10/tv-deals.jpg" alt="">
+      </div>
 </div>
+ -->
+
+  <!--     <div class="div3"> <img src="https://www.ikea.com/gb/en/images/products/besta-tv-bench-white__0351646_PE538328_S5.JPG?f=s" alt=""></div>
+      <div class="div4"> <img src="https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/582747.jpg" alt=""></div>
+      <div class="div5"> <img src="https://icdn2.digitaltrends.com/image/digitaltrends/lg-sm900-series-tv-front-500x500.jpg" alt=""></div>
+    </div>
+</div> -->
+
+
+<div class="parallax">
+  <div id="style="height:100px;background-color:transparent;font-size:18px></div>
+</div>
+
+
+
+
+<div class="parallax">
+  <div id="style="height:100px;background-color:transparent;font-size:18px></div>
+</div>
+
+<div class="orderprocess text-justify m-3">
+    <h1 class="text-center">ORDER PROCESS</h1>
+    <%= render 'shared/cardhome' %>
+</div>
+
 <div class="parallax"></div>
 
+
+<div class="row m-5">
+  <div class=" payements col-md-3 col-sm-12">
+  </div>
+</div>
+
+<%= yield %>
 </body>
-
 </html>

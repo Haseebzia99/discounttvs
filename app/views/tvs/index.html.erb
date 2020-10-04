@@ -1,5 +1,14 @@
-<% @tvs.each do |t| %>
-<h2><%= t.name %></h2>
-<h2><%= t.size %></h2>
-<% end %>
-<%= Date.today %>
+<div class="row">
+  <% @tvs.each do |t| %>
+   <div class="col-4">
+    <div class="tv">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="tv-infos">
+          <h2><%= t.name %></h2>
+          <h2><%= t.size %></h2>
+        <%= Date.today %>
+      </div>
+    </div>
+  <% end %>
+</div>
+</div>
