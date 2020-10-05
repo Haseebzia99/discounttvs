@@ -11,4 +11,9 @@ class TvsController < ApplicationController
       end
     end
   end
+
+  def show
+    @tv = Tv.find(params[:id])
+  end
+
 end

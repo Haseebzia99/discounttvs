@@ -1,6 +1,5 @@
-<div class="row">
-  <% @tvs.each do |t| %>
-   <div class="col-4">
+ <% @tvs.each do |t| %>
+   <div class="mydiv">
     <div class="tv">
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
       <div class="tv-infos">
@@ -11,4 +10,7 @@
     </div>
   <% end %>
 </div>
+
+<div>
+  <%= link_to 'hi', tv_path(tv), class: 'btn btn-secondary' %>
 </div>
