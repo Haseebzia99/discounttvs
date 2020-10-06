@@ -4,11 +4,32 @@
       <h4>Tv name</h4>
       <p><%= @tv.name %></p>
       <h4>Tv size</h4>
-      <p><%= @tv.size %>"</p>
+
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Choose your size
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#"><p><%= @tv.size %>"</p></a>
+        </div>
+
+
+
+
+
+
+      </div>
       <h4>Description</h4>
       <p><%= @tv.description %></p>
       <h4>Price</h4>
       <p>£<%= @tv.price %></p>
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+        <label class="custom-control-label" for="defaultUnchecked">TV Recycling</label>
+    </div>
     </div>
    </div>
 </div>
+
+
