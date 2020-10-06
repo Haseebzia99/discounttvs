@@ -1,25 +1,24 @@
 <div class="container">
    <div class="row ">
-    <div class="">
+    <div class="mb-3">
       <h4>Tv name</h4>
       <p><%= @tv.name %></p>
+
+
+
       <h4>Tv size</h4>
-
-
-      <div class="dropdown">
+      <div class="dropdown mb-3 ">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Choose your size
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="#"><p><%= @tv.size %>"</p></a>
         </div>
-
-
-
-
-
-
       </div>
+
+
+
+
       <h4>Description</h4>
       <p><%= @tv.description %></p>
       <h4>Price</h4>
@@ -30,6 +29,7 @@
     </div>
     </div>
    </div>
+<%= link_to 'Continue Shopping', tvs_path, class: "btn btn-primary"%>
+
+
 </div>
-
-
