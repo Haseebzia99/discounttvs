@@ -23,10 +23,32 @@
       <p><%= @tv.description %></p>
       <h4>Price</h4>
       <p>£<%= @tv.price %></p>
-    <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-        <label class="custom-control-label" for="defaultUnchecked">TV Recycling</label>
-    </div>
+
+
+
+<div class="checkboxes">
+  <div class="form-check form-check">
+    <input type="checkbox" class="form-check-input" id="checkbox" value="25" name="input1">
+    <label class="form-check-label" for="materialInline1">TV Recycling(£25)</label>
+  </div>
+
+  <div class="form-check form-check">
+      <input type="checkbox" class="form-check-input" id="materialInline2" value="40">
+      <label class="form-check-label" for="materialInline2">Full TV Installation and set up (£40)</label>
+  </div>
+</div>
+
+
+<!-- <script>
+
+document.getElementById('checkbox').onchange = function()  {
+  document.getElementById('input1').setAttribute(this.checked ? <%= @tv.price + 25 %> : <%= @tv.price %>)
+}
+
+</script>
+ -->
+
+
     </div>
    </div>
 <%= link_to 'Continue Shopping', tvs_path, class: "btn btn-primary"%>
