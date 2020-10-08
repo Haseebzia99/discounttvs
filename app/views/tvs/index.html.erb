@@ -1,15 +1,51 @@
- <% @tvs.each do |t| %>
-  <%= link_to tv_path(t.id) do %>
-   <div class="mydiv">
-    <div class="tv">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="tv-infos">
-          <h2><%= t.name %></h2>
-          <h2><%= t.size %>"</h2>
-          <h2>£<%= t.price %></h2>
-        <%= Date.today %>
+<div class="container-form-form">
+  <div class="simple-form container mt-5 mb-5 p-4">
+    <%= simple_form_for :search, url: tvs_path,  method: :get, remote: true do |f|%>
+    <div class="row">
+      <div class="col-4">
+        <%= f.input :name, collection: @tvs_all.map(&:name).uniq %>
+      </div>
+      <div class="col-4">
+        <%= f.input :size, collection: @tvs_all.map(&:size).uniq %>
+      </div>
+      <div class="col-4">
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-4">
+        <%= f.input :year, collection: @tvs_all.map(&:year).uniq%>
+      </div>
+      <div class="col-4">
+        <%= f.input :price, collection: @tvs_all.map(&:price).uniq%>
+      </div>
+
+      <div class="d-flex">
+      <div class="col-4 d-flex justify-content-center text-align-center">
+        <%= f.submit "Search", class: "btn btn-secondary" %>
+      </div>
+        <%= link_to 'View All', tvs_path, class: 'btn btn-secondary m-3 d-flex justify-content-center' %>
+      </div>
+
+    </div>
+
+    <% end %>
   </div>
-<% end %>
-<% end %>
+</div>
+
+<%= render 'shared/tvsindex', tvs: @tvs %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
