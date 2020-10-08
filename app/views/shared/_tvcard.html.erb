@@ -1,0 +1,15 @@
+<% @similar_tvs.each do |tv| %>
+<%= link_to tv_path(tv) do %>
+   <div class="mydiv">
+    <div class="tv">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="tv-infos">
+          <h2><%= tv.name %></h2>
+          <h2><%= tv.size %>"</h2>
+          <h2>£<%= tv.price %></h2>
+        <%= Date.today %>
+      </div>
+    </div>
+  </div>
+<% end %>
+<% end %>

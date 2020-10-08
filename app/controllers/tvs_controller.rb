@@ -14,6 +14,9 @@ class TvsController < ApplicationController
 
   def show
     @tv = Tv.find(params[:id])
+    # @similar_tvs = Tv.where(["name = ? and id != ?", @tv.name, @tv.id]).limit(3)
+
+    @similar_tvs = Tv.where(["name = ? and id != ?", @tv.name, @tv.id]).limit(3)
   end
 
   # def edit
@@ -23,7 +26,6 @@ class TvsController < ApplicationController
   # def update
   #   @tv = Tv.find(params[:id])
   #   @tv.update(tv_params)
-
 
     # recycle_price = old_price + 25
   #   install_price = old_price + 40
