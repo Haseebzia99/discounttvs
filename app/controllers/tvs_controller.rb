@@ -27,7 +27,7 @@ class TvsController < ApplicationController
   #   @tv = Tv.find(params[:id])
   #   @tv.update(tv_params)
 
-    # recycle_price = old_price + 25
+  # recycle_price = old_price + 25
   #   install_price = old_price + 40
   #   recycle_install_price = old_price + 65
 
