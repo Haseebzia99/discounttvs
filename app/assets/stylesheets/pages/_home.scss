@@ -240,3 +240,17 @@ body {
   padding: 0;
   margin: 0;
 }
+
+.text-big {
+  text-align: center;
+  padding: 80px;
+  h2 {
+    font-size: 4.5em;
+    color: darkgrey;
+  }
+  p {
+    font-size: 2em;
+    color: blue;
+    opacity: 0.5;
+  }
+}
