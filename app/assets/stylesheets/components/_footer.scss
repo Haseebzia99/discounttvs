@@ -8,26 +8,21 @@
   margin-right: 30px;
   height: 20rem;
 }
-.footer-links {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  color: darkgrey;
-}
+
 .footer-links a {
   color: orange;
   text-decoration: none;
   font-size: 24px;
-  padding: 40px;
+  margin: 20px;
+
 }
 .footer-links a:hover {
-  color: lightgrey;
+  color: black;
 }
 
 .details {
 list-style-type: none;
 color: white;
-// font-family: montserrat;
 font-size: 18px;
 margin: 16px;
 }
@@ -46,10 +41,8 @@ margin: 16px;
 
 .aligned :hover {
 color : orange;
-
 }
 
-// #creditcards {
-//   margin-left: 200px;
-//   margin-top: 8px;
-// }
+.whole-footer {
+  background-color: black;
+}
