@@ -1,11 +1,5 @@
 .footer {
   background: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: rgba(0,0,0,0.3);
-  width: 100vw;
-  margin-right: 30px;
   height: 20rem;
 }
 
@@ -34,8 +28,6 @@ margin: 16px;
 .aligned {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 120vw;
   color: white;
 }
 
