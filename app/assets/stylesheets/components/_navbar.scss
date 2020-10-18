@@ -329,10 +329,10 @@ header {
   transition: all .5s ease-in-out;
 }
 .menu-btn__burger::before {
-  transform: translateY(-16px);
+  transform: translateY(-8px);
 }
 .menu-btn__burger::after {
-  transform: translateY(16px);
+  transform: translateY(8px);
 }
 /* ANIMATION */
 .menu-btn.open .menu-btn__burger {
