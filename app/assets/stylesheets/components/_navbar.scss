@@ -1,11 +1,11 @@
 .nav-logo {
-  height: 48px;
-
+  height: 56px;
+  width: 156px;
 }
 header {
   position: sticky;
   top: 0;
-  background: black;
+  background: blue;
   width: 100%;
   z-index: 1000;
   ul {
@@ -16,7 +16,7 @@ header {
 .nav-conatiner {
   max-width: 75rem;
   padding: 0 2rem;
-  background-color: black;
+  background-color: blue;
   margin: 0 auto;
   display: flex;
   position: relative;
@@ -79,19 +79,19 @@ header {
   position: relative;
 }
 .dropdown-link:not(:nth-child(1)) {
-  border-top: 1px solid black;
+  border-top: 1px solid blue;
 }
 .dropdown-link a {
   display: flex;
   padding: .5rem 1rem;
   font-size: .9rem;
-  background-color: blue;
+  background-color: black;
   align-items: center;
-  color: black;
+  color: blue;
   transition: .3s;
   &:hover {
-    color: blue;
-    background-color: black;
+    color: black;
+    background-color: blue;
     transform: scale(1);
   }
 }
@@ -104,14 +104,14 @@ header {
   height: 11px;
   left: 95px;
   top: -5.5px;
-  background-color: blue;
+  background-color: black;
   transform: rotate(45deg);
   cursor: pointer;
   transition: .3s;
   z-index: -1;
 }
 .dropdown-link:first-child:hover ~ .arrow {
-  background-color: black;
+  background-color: blue;
 }
 .nav-link:hover > .dropdown, .dropdown-link:hover > .dropdown {
   transform: translate(0, 0);
@@ -135,7 +135,7 @@ header {
   width: 1.6rem;
   height: 3px;
   border-radius: 3px;
-  background-color: blue;
+  background-color: black;
   position: relative;
   z-index: 1001;
   transition: .5s;
@@ -146,7 +146,7 @@ header {
   position: absolute;
   width: inherit;
   height: inherit;
-  background-color: blue;
+  background-color: black;
   border-radius: 3px;
   transition: .5s;
 }
@@ -276,7 +276,7 @@ header {
 
   .dropdown-link a {
     background-color: transparent;
-    color: blue;
+    color: black;
     padding: 1.2rem 2rem;
   }
 
@@ -296,53 +296,4 @@ header {
   .nav-conatiner {
     padding: 1rem 2rem;
   }
-}
-
-.menu-btn {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  transition: all .6s ease-in-out;
-  /* border: 3px solid #fff; */
-}
-.menu-btn__burger {
-  width: 25px;
-  height: 3px;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.2);
-  transition: all .5s ease-in-out;
-}
-.menu-btn__burger::before,
-.menu-btn__burger::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 3px;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.2);
-  transition: all .5s ease-in-out;
-}
-.menu-btn__burger::before {
-  transform: translateY(-8px);
-}
-.menu-btn__burger::after {
-  transform: translateY(8px);
-}
-/* ANIMATION */
-.menu-btn.open .menu-btn__burger {
-  transform: translateX(-50px);
-  background: transparent;
-  box-shadow: none;
-}
-.menu-btn.open .menu-btn__burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
-}
-.menu-btn.open .menu-btn__burger::after {
-  transform: rotate(-45deg) translate(35px, 35px);
 }

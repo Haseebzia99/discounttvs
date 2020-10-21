@@ -1,16 +1,11 @@
 <header>
-<div>
   <div class="nav-conatiner">
-  <div class="menu-btn">
-    <div class="menu-btn__burger"></div>
-  </div>
     <input type="checkbox" name="" id="check">
     <div class="logo-container">
       <%= link_to root_path do %>
-      <%= image_tag "https://discounttvs.co.uk/wp-content/uploads/2020/01/Logo-3.png", class: "nav-logo" %>
+      <%= image_tag "", class: "nav-logo" %>
       <% end %>
     </div>
-
 
     <div class="nav-btn">
       <div class="navbar-links">
@@ -21,52 +16,41 @@
               <ul>
                 <li class="arrow"></li>
                 <li class="dropdown-link">
-                  <a href="#">Link 1</a>
+                  <%= link_to "Design", root_path %>
                 </li>
                 <li class="dropdown-link">
-                  <a href="#">Link 2</a>
+                  <%= link_to "Sustainability", tvs_path %>
                 </li>
                 <li class="dropdown-link">
-                  <a href="#">Link 3</a>
+                  <%= link_to "Transformation", tvs_path %>
                 </li>
 
               </ul>
             </div>
           </li>
           <li class="nav-link" style="--i: .9s">
-            <a href="#strategy">What We Do</a>
+            <a href="http://www.bisimpact.com#strategy">What We Do</a>
           </li>
           <li class="nav-link" style="--i: 1.4s">
-            <%= link_to 'Shop', tvs_path %>
+            <%= link_to 'Our Team', root_path %>
           </li>
           <li class="nav-link" style="--i: 1.8s">
-            <a href="#">Blog</a>
+            <%= link_to 'Blog', root_path %>
           </li>
           <li class="nav-link" style="--i: 2.2s">
-            <a href="#">Map<i class="fas fa-caret-down rotate"></i></a>
-            <div class="dropdown">
-              <ul>
-                <li class="arrow"></li>
-                <li class="dropdown-link">
-                  <a href="#">Link 4</a>
-                </li>
-                <li class="dropdown-link">
-                  <a href="#">Link 5</a>
-                </li>
-                <li class="dropdown-link">
-                  <a href="#">Link 6</a>
-                </li>
-              </ul>
-            </div>
+            <%= link_to "Videos", root_path %>
           </li>
           <li class="nav-link" style="--i: 2.6s">
-            <a href="#contacts">Contact Us</a>
+            <a href="http://www.bisimpact.com#contacts">Contact Us</a>
           </li>
         </ul>
       </div>
     </div>
-<script src="main.js"></script>
-</div>
+    <div class="hamburger-menu-container">
+        <div class="hamburger-menu">
+          <div></div>
+        </div>
+    </div>
   </div>
 </header>
 
