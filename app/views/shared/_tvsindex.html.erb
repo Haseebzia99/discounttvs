@@ -2,8 +2,8 @@
   <%= link_to tv_path(t.id) do %>
    <div class="mydiv">
     <div class="tv">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="tv-infos">
+        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="tv-infos">
           <h2><%= t.name %></h2>
           <h2><%= t.size %>"</h2>
           <h2>£<%= t.price %></h2>

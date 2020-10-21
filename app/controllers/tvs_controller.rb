@@ -37,7 +37,7 @@ class TvsController < ApplicationController
   #   old_price = @tv.price
   # private
 
-  # def tv_params
-  #   params.require(:tv).permit(:price)
-  # end
+  def tv_params
+    params.require(:tv).permit(:price, :name, :model, :photo)
+  end
 end

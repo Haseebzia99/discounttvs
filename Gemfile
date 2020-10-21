@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 gem 'sidekiq'
 gem 'sidekiq-failures', '~> 1.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -26,6 +28,8 @@ gem 'redis', '~> 4.0'
 gem 'jquery-rails'
 # Use Active Storage variant
 gem 'pg_search', '~> 2.3.0'
+
+gem 'cloudinary', '~> 1.16.0'
 
 # gem 'image_processing', '~> 1.2'
 gem 'pg_search', '~> 2.3.0'

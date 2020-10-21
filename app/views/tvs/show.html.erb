@@ -3,22 +3,17 @@
 
 <div class="row ">
   <div class="col-8 photo-gallery">
-    <img class="main-gallery-image" src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2380&q=80" alt="">
-  <div class="scroll-row">
-    <img class="scroll_image" src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2380&q=80" alt="">
-    <img class="scroll_image" src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2380&q=80" alt="">
-    <img class="scroll_image" src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2380&q=80" alt="">
-    <img class="scroll_image" src="https://discounttvs.co.uk/wp-content/uploads/2020/02/3-5-scaled-1.jpg" alt="">
-    <img class="scroll_image" src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2380&q=80" alt="">
-    <img class="scroll_image" src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2380&q=80" alt="">
-    <img class="scroll_image" src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2380&q=80" alt="">
-    <img class="scroll_image" src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2380&q=80" alt="">
-    <img class="scroll_image" src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2380&q=80" alt="">
-    <img class="scroll_image" src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2380&q=80" alt="">
-    <img class="scroll_image" src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2380&q=80" alt="">
+      <% if @tv.photos.any? %>
+      <%= cl_image_tag @tv.photos.first.key, class: "main-gallery-image", crop: :fill %>
+      <div class="scroll-row">
+        <% @tv.photos.each do |photo| %>
+          <%= cl_image_tag photo.key, class: "scroll_image", crop: :fill %>
+        <% end %>
+      </div>
+      <% end %>
   </div>
 </div>
-</div>
+
 
 
    <div class="row ">
