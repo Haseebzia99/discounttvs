@@ -1,9 +1,10 @@
-<%= simple_form_for (@tv) do |f| %>
+<%= simple_form_for (@tv_new) do |f| %>
 <div>
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.input :year %>
   <%= f.input :size %>
-  <%= f.input :photo, as: :file %>
+  <%= f.input :photos, input_html: {multiple: true}, as: :file, :label => "Upload photos",class: "btn btn-primary" %>
+  <%= f.button :submit, class: "btn-main" %>
 </div>
 <% end %>

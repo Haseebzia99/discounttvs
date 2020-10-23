@@ -3,10 +3,10 @@
 
 <div class="row ">
   <div class="col-8 photo-gallery">
-      <% if @tv.photos.any? %>
-      <%= cl_image_tag @tv.photos.first.key, class: "main-gallery-image", crop: :fill %>
+      <% if @tv_new.photos.any? %>
+      <%= cl_image_tag @tv_new.photos.first.key, class: "main-gallery-image", crop: :fill %>
       <div class="scroll-row">
-        <% @tv.photos.each do |photo| %>
+        <% @tv_new.photos.each do |photo| %>
           <%= cl_image_tag photo.key, class: "scroll_image", crop: :fill %>
         <% end %>
       </div>
