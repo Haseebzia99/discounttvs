@@ -12,15 +12,6 @@
 
 
 
-<div>
- <%= simple_form_for(@tv) do |f| %>
-     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <% end %>
-</div>
-
-<%= cl_image_tag @tv.photo.key, height: 300, width: 400, crop: :fill %>
-
-
   <div class="d-flex justify-content-space-around text-align-center">
     <div class="mr-5">
       <%= f.submit "Search", class: "btn btn-secondary" %>
@@ -35,4 +26,5 @@
 <div id="tvs">
   <%= render 'shared/tvsindex', tvs: @tvs %>
 </div>
+
 </div>

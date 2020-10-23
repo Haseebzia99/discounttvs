@@ -20,6 +20,23 @@ class TvsController < ApplicationController
     @similar_tvs = Tv.where(["name = ? and id != ?", @tv.name, @tv.id]).limit(3)
   end
 
+  def new
+   @tv_new = Tv.new
+   @tv.user = current_user
+  end
+
+  def create
+    @tv_new = Tv.new(tv_params)
+    @tv.user = current_user
+    if @tv.save
+      flash[:success] = "Your Car Has been listed"
+      redirect_to tvs_path
+    else
+      render :new
+    end
+
+  end
+
   # def edit
   #   @tv = Tv.find(params[:id])
   # end
