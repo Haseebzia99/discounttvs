@@ -34,9 +34,11 @@
           <li class="nav-link" style="--i: 1.8s">
             <%= link_to 'About Us', root_path %>
           </li>
-          <li class="nav-link" style="--i: 2.2s">
-            <%= link_to "Create Tv", new_tv_path %>
-          </li>
+          <% if current_user.admin == true %>
+            <li class="nav-link" style="--i: 2.2s">
+              <%= link_to "Create Tv", new_tv_path %>
+            </li>
+          <% end %>
         </ul>
       </div>
     </div>

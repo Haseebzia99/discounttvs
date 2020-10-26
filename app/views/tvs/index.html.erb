@@ -20,10 +20,12 @@
       <%= link_to 'View All', tvs_path, class: 'btn btn-secondary' %>
     </div>
 
-    <div class="ml-5">
-      <%= link_to 'Create Tv', new_tv_path, class: 'btn btn-secondary' %>
+  <% if current_user.admin == true %>
+      <div class="ml-5">
+        <%= link_to 'Create Tv', new_tv_path, class: 'btn btn-secondary' %>
+      </div>
     </div>
-  </div>
+  <% end %>
 
   <% end %>
   </div>
