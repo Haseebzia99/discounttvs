@@ -31,9 +31,6 @@
           <li class="nav-link" style="--i: 1.4s">
             <%= link_to 'Our Tvs', tvs_path %>
           </li>
-
-
-
           <li class="nav-link" style="--i: 1.8s">
             <%= link_to 'About Us', root_path %>
           </li>
@@ -42,8 +39,6 @@
               <%= link_to "Create Tv", new_tv_path %>
             </li>
           <% end %>
-
-
           <% if user_signed_in? %>
           <li class="nav-link" style="--i: 1.8s">
             <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
@@ -53,10 +48,6 @@
             <%= link_to 'Log In', new_user_session_path %>
           </li>
           <% end %>
-
-
-
-
         </ul>
       </div>
     </div>
