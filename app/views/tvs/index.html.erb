@@ -12,7 +12,7 @@
 
 
 
-  <div class="d-flex justify-content-space-around text-align-center">
+  <div class="d-flex justify-content-space-around text-align-center container">
     <div class="mr-5">
       <%= f.submit "Search", class: "btn btn-secondary" %>
     </div>
@@ -20,7 +20,7 @@
       <%= link_to 'View All', tvs_path, class: 'btn btn-secondary' %>
     </div>
 
-  <% if current_user.admin == true %>
+  <% if current_user.try(:admin?) == true %>
       <div class="ml-5">
         <%= link_to 'Create Tv', new_tv_path, class: 'btn btn-secondary' %>
       </div>

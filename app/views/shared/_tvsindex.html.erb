@@ -1,6 +1,6 @@
  <% @tvs.each do |t| %>
   <%= link_to tv_path(t.id) do %>
-   <div class="mydiv">
+   <div class="mydiv container">
     <div class="tv">
         <div class="tv-index-image" style="background-image: url(<%= t.photos.first ? (cl_image_path t.photos.first.key, crop: :fill) : ""  %>)"></div>
         <div class="tv-infos">
