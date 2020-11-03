@@ -67,8 +67,13 @@ document.getElementById('checkbox').onchange = function()  {
 
 
 
-
-<%= link_to 'Continue Shopping', tvs_path, class: "btn btn-primary"%>
+<div>
+  <%= link_to 'Continue Shopping', tvs_path, class: "btn btn-primary"%>
+  <% if current_user.try(:admin?) == true %>
+  <%= link_to "Edit", edit_tv_path(@tv), class: "btn btn-primary"%>
+  <%= link_to "Delete", tv_path(@tv), class: "btn btn-primary", method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
+</div>
 
 
 <% if @similar_tvs %>

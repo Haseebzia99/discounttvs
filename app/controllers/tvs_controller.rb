@@ -34,24 +34,23 @@ class TvsController < ApplicationController
     end
   end
 
-  # def edit
-  #   @tv = Tv.find(params[:id])
-  # end
+  def edit
+    @tv = Tv.find(params[:id])
+  end
 
-  # def update
-  #   @tv = Tv.find(params[:id])
-  #   @tv.update(tv_params)
+  def update
+    @tv = Tv.find(params[:id])
+    @tv.update(tv_params)
+    redirect_to user_path(current_user)
+  end
 
-  # recycle_price = old_price + 25
-  #   install_price = old_price + 40
-  #   recycle_install_price = old_price + 65
-
-  # end
-
-  #   old_price = @tv.price
-  # private
+  def destroy
+    @tv = Tv.find(params[:id])
+    @tv.destroy(tv_params)
+    redirect_to user_path(current_user)
+  end
 
   def tv_params
-    params.require(:tv).permit(:price, :name, :model, photos: [])
+    params.require(:tv).permit(:price, :name, :model, :size, :year, photos: [])
   end
 end
