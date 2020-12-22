@@ -23,8 +23,6 @@
   </div>
 </div>
 
-
-
 <h2 class="text-center mt-3">Search for your new TV here</h2>
 <div class="orderprocess m-1 row justify-content-center">
   <%= render 'shared/search' %>
@@ -32,51 +30,51 @@
 
 <h2 class="text-center">Choose your TV</h2>
 <div class="container mb-5" data-aos="zoom-in">
-    <div class="row wrap">
-      <div class="col-lg-7 col-md-6 box-long-padding">
-        <div class="grid-box-long">
-          <img class="grid-box-image-long" src="https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg" alt="">
-          <div class="text-inner-box">
-            <h1>4K</h1>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-5 col-md-12 pl-4 box-tr-padding">
-        <div class="box-top-right">
-          <img class="box-top-right-image" src="https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg" alt="">
-        <div class="text-inner">
-          <h1>OLED</h1>
-        </div>
+  <div class="row wrap">
+    <div class="col-lg-7 col-md-6 box-long-padding">
+      <div class="grid-box-long">
+        <img class="grid-box-image-long" src="https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg" alt="">
+        <div class="text-inner-box">
+          <h1>4K</h1>
         </div>
       </div>
     </div>
+    <div class="col-lg-5 col-md-12 pl-4 box-tr-padding">
+      <div class="box-top-right">
+        <img class="box-top-right-image" src="https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg" alt="">
+      <div class="text-inner">
+        <h1>OLED</h1>
+      </div>
+      </div>
+    </div>
+  </div>
 
-    <div class="row">
-      <div class="col-lg-3 col-md-12">
-        <div class="grid-bottom">
-          <img class="grid-bottom-image" src="https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg" alt="">
-          <div class="text-inner">
-            <h1>The FRAME</h1>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-6">
-        <div class="grid-bottom">
-          <img class="grid-bottom-image" src="https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg" alt="">
-          <div class="text-inner-box3">
-            <h1>8K</h1>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="grid-bottom">
-          <img class="grid-bottom-image" src="https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg" alt="">
-          <div class="text-inner">
-            <h1>Curved</h1>
-          </div>
+  <div class="row">
+    <div class="col-lg-3 col-md-12">
+      <div class="grid-bottom">
+        <img class="grid-bottom-image" src="https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg" alt="">
+        <div class="text-inner">
+          <h1>The FRAME</h1>
         </div>
       </div>
     </div>
+    <div class="col-lg-6 col-md-6">
+      <div class="grid-bottom">
+        <img class="grid-bottom-image" src="https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg" alt="">
+        <div class="text-inner-box3">
+          <h1>8K</h1>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="grid-bottom">
+        <img class="grid-bottom-image" src="https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg" alt="">
+        <div class="text-inner">
+          <h1>Curved</h1>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="parallax">
@@ -88,8 +86,14 @@
   </div> -->
 
 <div class="orderprocess text-justify m-3">
-    <h1 class="text-center">ORDER PROCESS</h1>
-    <%= render 'shared/cardhome' %>
+  <h1 class="text-center">ORDER PROCESS</h1>
+  <%= render 'shared/cardhome' %>
+</div>
+
+<div class="text-center border m-2 p-3">
+  <h2 class="text-center">Best Sellers</h2>
+  <% @deals.each do |tv| %>
+  <% end %>
 </div>
 
 <div class="parallax">
@@ -97,10 +101,12 @@
 </div>
 
 <div>
-
   <%= render 'shared/form' %>
-
 </div>
+
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+<%= yield %>
 
 
 
@@ -109,13 +115,5 @@
   </div>
 </div>
  -->
-
-<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-
-
-<%= yield %>
-
-
-
 </body>
 </html>
