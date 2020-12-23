@@ -7,8 +7,8 @@ class PagesController < ApplicationController
     else
       @tvs = Tv.all
     end
-
-  @reviews = [{ content: "Order Today & Pay on Delivery Day" }, { content: "We offer a Great Service"}, { content: "Price Promise on all Products" }]
+    @deals = Tv.order(:price).first(3)
+    @reviews = [{ content: "Order Today & Pay on Delivery Day" }, { content: "We offer a Great Service"}, { content: "Price Promise on all Products" }]
 
   end
 
