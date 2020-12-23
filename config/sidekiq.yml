@@ -1,7 +1,7 @@
-:concurrency: 3
-:timeout: 60
-:verbose: true
-:queues:
+# :concurrency: 3
+# :timeout: 60
+# :verbose: true
+# :queues:
 
-  - default
-  - mailers
+#   - default
+#   - mailers

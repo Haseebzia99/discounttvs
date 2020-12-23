@@ -27,7 +27,7 @@ class TvsController < ApplicationController
   def create
     @tv_new = Tv.new(tv_params)
     if @tv_new.save
-      flash[:success] = "Your Car Has been listed"
+      flash[:success] = "Your Tv Has been listed"
       redirect_to tvs_path
     else
       render :new
