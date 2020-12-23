@@ -92,7 +92,8 @@
 
 <div class="text-center border m-2 p-3">
   <h2 class="text-center">Best Sellers</h2>
-  <% @deals.each do |tv| %>
+  <% @best_sellers.each do |tv| %>
+  <%= render 'shared/tvindex' %>
   <% end %>
 </div>
 
