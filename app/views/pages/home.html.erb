@@ -90,15 +90,16 @@
   <%= render 'shared/cardhome' %>
 </div>
 
-<div class="text-center border m-2 p-3">
-  <h2 class="text-center">Best Sellers</h2>
-  <% @deals.each do |tv| %>
-  <% end %>
-</div>
-
 <div class="parallax">
   <div id="style="height:100px;background-color:transparent;font-size:18px></div>
 </div>
+
+<div class="best-sellers-section border p-3">
+  <h2 class="text-center">Best Sellers</h2>
+  <% @best_sellers.each do |tv| %>
+  <% end %>
+</div>
+
 
 <div>
   <%= render 'shared/form' %>
