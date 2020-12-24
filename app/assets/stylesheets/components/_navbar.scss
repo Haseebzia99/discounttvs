@@ -2,7 +2,7 @@
   height: 56px;
 }
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   background: white;
   width: 100%;
@@ -13,12 +13,10 @@ header {
 }
 
 .nav-conatiner {
-  max-width: 75rem;
   padding: 0 2rem;
   background-color: white;
   margin: 0 auto;
   display: flex;
-  position: relative;
 }
 .logo-container {
   flex: 1;

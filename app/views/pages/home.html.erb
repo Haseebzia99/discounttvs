@@ -2,19 +2,6 @@
 <body>
 
 <div class="banner">
-  <div class="reviews-container">
-    <div id="carouselExampleIndicators" class="carousel slide bg-transparent" data-ride="carousel">
-      <div class="carousel-inner">
-      <!-- for every review, we are going to iterate over and if its the first review, then give it the active class otherwise its not active. (needs to be active, because additional JS is being run in the background for each carosel) -->
-        <% @reviews.each_with_index do |review, index| %>
-          <div class="carousel-item carclique-carosel-slide text-center <%= index == 0 ? 'active' : '' %>">
-            <h1><%= review[:name] %></h1>
-            <h2><%= review[:content] %></h2>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
   <div class="slogan">
     <h1 class="text-center">ORDER TODAY.. <strong>PAY ON DELIVERY DAY</strong></h1>
   <div class="row justify-content-center mt-3">
@@ -22,55 +9,56 @@
   </div>
   </div>
 </div>
-
 <h2 class="text-center mt-3">Search for your new TV here</h2>
 <div class="orderprocess m-1 row justify-content-center">
   <%= render 'shared/search' %>
 </div>
 
-<h2 class="text-center">Choose your TV</h2>
-<div class="container mb-5" data-aos="zoom-in">
-  <div class="row wrap">
-    <div class="col-lg-7 col-md-6 box-long-padding">
-      <div class="grid-box-long">
-        <img class="grid-box-image-long" src="https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg" alt="">
-        <div class="text-inner-box">
-          <h1>4K</h1>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-5 col-md-12 pl-4 box-tr-padding">
-      <div class="box-top-right">
-        <img class="box-top-right-image" src="https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg" alt="">
-      <div class="text-inner">
-        <h1>OLED</h1>
-      </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-lg-3 col-md-12">
-      <div class="grid-bottom">
-        <img class="grid-bottom-image" src="https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg" alt="">
+<div class="container border-top mb-4">
+  <div class="" data-aos="zoom-in">
+    <h2 class="text-center mt-3">Choose your TV</h2>
+    <div class="row wrap">
+      <div class="col-lg-7 col-md-6 box-long-padding">
+        <div class="grid-box-long">
+          <img class="grid-box-image-long" src="https://discounttvs.co.uk/wp-content/uploads/2020/02/4K-TV.jpg" alt="">
+          <div class="text-inner-box">
+            <h1>4K</h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-12 pl-4 box-tr-padding">
+        <div class="box-top-right">
+          <img class="box-top-right-image" src="https://discounttvs.co.uk/wp-content/uploads/2020/02/OLED-TV.jpg" alt="">
         <div class="text-inner">
-          <h1>The FRAME</h1>
+          <h1>OLED</h1>
+        </div>
         </div>
       </div>
     </div>
-    <div class="col-lg-6 col-md-6">
-      <div class="grid-bottom">
-        <img class="grid-bottom-image" src="https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg" alt="">
-        <div class="text-inner-box3">
-          <h1>8K</h1>
+    <div class="row">
+      <div class="col-lg-3 col-md-12">
+        <div class="grid-bottom">
+          <img class="grid-bottom-image" src="https://discounttvs.co.uk/wp-content/uploads/2020/02/TheFrameTV.jpg" alt="">
+          <div class="text-inner">
+            <h1>The FRAME</h1>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-      <div class="grid-bottom">
-        <img class="grid-bottom-image" src="https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg" alt="">
-        <div class="text-inner">
-          <h1>Curved</h1>
+      <div class="col-lg-6 col-md-6">
+        <div class="grid-bottom">
+          <img class="grid-bottom-image" src="https://discounttvs.co.uk/wp-content/uploads/2020/02/8K-TV.jpg" alt="">
+          <div class="text-inner-box3">
+            <h1>8K</h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="grid-bottom">
+          <img class="grid-bottom-image" src="https://discounttvs.co.uk/wp-content/uploads/2020/02/Curved-TV.png" alt="">
+          <div class="text-inner">
+            <h1>Curved</h1>
+          </div>
         </div>
       </div>
     </div>
@@ -94,14 +82,32 @@
   <div id="style="height:100px;background-color:transparent;font-size:18px></div>
 </div>
 
-<div class="best-sellers-section border p-3">
-  <h2 class="text-center">Best Sellers</h2>
-  <% @best_sellers.each do |tv| %>
-  <% end %>
-</div>
+
+  <div class="justify-content-center">
+    <div class="p-3">
+      <h2 class="text-center">Best Sellers</h2>
+      <% @best_sellers.each do |tv| %>
+        <%= render 'shared/bestsellers' %>
+      <% end %>
+    </div>
+  </div>
 
 
-<div>
+  <div class="reviews-container">
+    <div id="carouselExampleIndicators" class="carousel slide bg-transparent" data-ride="carousel">
+      <div class="carousel-inner">
+      <!-- for every review, we are going to iterate over and if its the first review, then give it the active class otherwise its not active. (needs to be active, because additional JS is being run in the background for each carosel) -->
+        <% @reviews.each_with_index do |review, index| %>
+          <div class="carousel-item carclique-carosel-slide text-center <%= index == 0 ? 'active' : '' %>">
+            <h1><%= review[:name] %></h1>
+            <h2><%= review[:content] %></h2>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+<div class="best-sellers-section">
   <%= render 'shared/form' %>
 </div>
 
@@ -118,3 +124,6 @@
  -->
 </body>
 </html>
+
+
+
