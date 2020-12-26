@@ -8,6 +8,7 @@
   100% {background: url("https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2380&q=80")}
 }
 
+// first image as last image
 
 .banner {
   background-size: cover;
@@ -74,6 +75,7 @@ body, html {
   font-weight: bold;
   margin: 0;
   align: center;
+  font-family: "gill-sans-bold";
 
 }
 
@@ -156,6 +158,7 @@ body {
   transition: all 0.5s ease-in-out;
   transform: scale(1);
 }
+
 .grid-box-long:hover .grid-box-image-long{
   transform: scale(1.1);
 }
@@ -204,6 +207,7 @@ body {
 .grid-bottom:hover .grid-bottom-image{
   transform: scale(1.1);
 }
+
 .text-inner {
   background: rgba(100, 162, 205, .8);
   width: 100%;
@@ -258,5 +262,4 @@ body {
 
 .best-sellers-section {
   background-color: #CFCBCA;
-
 }

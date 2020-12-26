@@ -41,7 +41,8 @@ class TvsController < ApplicationController
   def update
     @tv = Tv.find(params[:id])
     @tv.update(tv_params)
-    redirect_to user_path(current_user)
+    redirect_to tvs_path(current_user)
+    @tv.save
   end
 
   def destroy
