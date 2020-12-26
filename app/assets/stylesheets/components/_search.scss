@@ -1,38 +1,45 @@
+
 .search_bar {
-  position: relative;
-  border-radius: 40px;
+  // position: relative;
+  border-radius: 25px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-top: 36px;
   width: 560px;
+  margin: 0 auto;
 }
 
 .postfix {
-  position: absolute;
+
   border-radius: 30px;
-  top: 6px;
-  right: 24px;
   padding-top: 4px;
   padding: 6px;
-  width: 50px;
+  // width: 50px;
   border: white;
   background-color: white;
   height: 40px;
 }
 
-.postfix:hover{
-  background-color: #053D4D;
-}
+
+// .postfix:hover{
+
+//   background-color: lightgrey;
+// }
 
 .fa-search {
   width: 20%;
-  height: 10%;
+  // height: 10%;
 }
 
 .h70 {
   height: 50px;
-  width: 560px;
+  // width: 560px;
 }
 
-.form-control {
-  border-radius: 15px;
+#affect {
+  display: none;
 }
+
+// #movement {
+//   position: relative;
+//   wido
+// }
