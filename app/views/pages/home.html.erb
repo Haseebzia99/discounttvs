@@ -1,23 +1,22 @@
 <html>
 <body>
 
-<div class="banner">
+<div class="banner mb-3">
   <div class="slogan">
     <h1 class="text-center">ORDER TODAY.. <strong>PAY ON DELIVERY DAY</strong></h1>
   <div class="row justify-content-center mt-3">
     <button type="button" class="btn btn-primary"><%= link_to "Shop Now!", tvs_path %></button>
   </div>
   </div>
-</div>
-<div>
-  <h2 class="text-center mt-3">Search for your new TV here</h2>
-  <%= render 'shared/search' %>
+  <div>
+    <h2 class="text-center mt-3">Search for your new TV here</h2>
+    <%= render 'shared/search' %>
+  </div>
 </div>
 
-
-<div class="container border-top mb-4">
+<div class="container mb-4">
   <div class="" data-aos="zoom-in">
-    <h2 class="text-center mt-3">Choose your TV</h2>
+    <h2 class="text-center border-bottom pb-3 mt-5">Choose your TV</h2>
     <div class="row wrap">
       <div class="col-lg-7 col-md-6 box-long-padding">
         <div class="grid-box-long">
@@ -68,7 +67,6 @@
 <div class="parallax">
   <div id="style="height:100px;background-color:transparent;font-size:18px></div>
 </div>
-
   <!-- <div class="text-big" data-aos="fade-right">
     <h2>We are a group of analytically minded individuals, who seek to provide a new perspective on how organisational value can be distributed.</h2>
   </div> -->
@@ -78,36 +76,36 @@
   <%= render 'shared/cardhome' %>
 </div>
 
+<div class="container">
+  <h2 class="text-center border-bottom m-2 p-3">Best Sellers</h2>
+  <div class=" d-flex justify-content-around">
+    <div class="row">
+        <% @best_sellers.each do |tv| %>
+          <%= render 'shared/bestsellers' %>
+        <% end %>
+    </div>
+  </div>
+</div>
+
 <div class="parallax">
   <div id="style="height:100px;background-color:transparent;font-size:18px></div>
 </div>
 
-
-  <div class="justify-content-center">
-    <div class="p-3">
-      <h2 class="text-center border-bottom m-2 p-3">Best Sellers</h2>
-      <% @best_sellers.each do |tv| %>
-        <%= render 'shared/bestsellers' %>
+<div class="review-container mt-5">
+  <div id="carouselExampleIndicators" class="carousel slide bg-transparent" data-ride="carousel">
+    <div class="carousel-inner">
+    <!-- for every review, we are going to iterate over and if its the first review, then give it the active class otherwise its not active. (needs to be active, because additional JS is being run in the background for each carosel) -->
+      <% @reviews.each_with_index do |review, index| %>
+        <div class="carousel-item carclique-carosel-slide text-center <%= index == 0 ? 'active' : '' %>">
+          <h1><%= review[:name] %></h1>
+          <h2>"<%= review[:content] %>"</h2>
+        </div>
       <% end %>
     </div>
   </div>
+</div>
 
-
-  <div class="reviews-container">
-    <div id="carouselExampleIndicators" class="carousel slide bg-transparent" data-ride="carousel">
-      <div class="carousel-inner">
-      <!-- for every review, we are going to iterate over and if its the first review, then give it the active class otherwise its not active. (needs to be active, because additional JS is being run in the background for each carosel) -->
-        <% @reviews.each_with_index do |review, index| %>
-          <div class="carousel-item carclique-carosel-slide text-center <%= index == 0 ? 'active' : '' %>">
-            <h1><%= review[:name] %></h1>
-            <h2><%= review[:content] %></h2>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-
-<div class="best-sellers-section">
+<div class="container">
   <%= render 'shared/form' %>
 </div>
 
@@ -115,17 +113,5 @@
 
 <%= yield %>
 
-
-
-<!-- <div class="row m-5">
-  <div class=" payements col-md-3 col-sm-12">
-  </div>
-</div>
- -->
 </body>
 </html>
-
-<!-- https://images.unsplash.com/photo-1590650217455-f0cef0d1018f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80 -->
-<!-- https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80 -->
-<!-- https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80 -->
-<!-- https://images.unsplash.com/photo-1542744095-291d1f67b221?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80 -->

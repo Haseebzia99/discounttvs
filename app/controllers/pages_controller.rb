@@ -7,7 +7,7 @@ class PagesController < ApplicationController
     else
       @tvs = Tv.all
     end
-    @best_sellers = Tv.order(:price).limit(3)
+    @best_sellers = Tv.order(:price).limit(2)
     @reviews = [{ content: "Order Today & Pay on Delivery Day" }, { content: "We offer a Great Service"}, { content: "Price Promise on all Products" }]
 
   end
