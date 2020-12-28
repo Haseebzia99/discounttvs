@@ -1,3 +1,5 @@
+// banner feature css ------
+
 @keyframes fader {
   0% {background: url("https://unsplash.com/photos/o9KZozGAKQo")}
   16.67% {background: url("https://images.unsplash.com/photo-1501360575895-3f3f2639fd74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80")}
@@ -7,8 +9,6 @@
   83.35% {background: url("https://www.jbscrapmetal.com/wp-content/uploads/2017/10/jb_scrap__0010_electric-motors.jpg")}
   100% {background: url("https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2380&q=80")}
 }
-
-// first image as last image
 
 .banner {
   background-size: cover;
@@ -47,6 +47,8 @@ body, html {
   width: 100px;
 }
 
+// parallax feature -------
+
 .parallax {
   background-image: url('https://images.unsplash.com/photo-1567602901358-5ba00815eb15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
   height: 20%;
@@ -55,6 +57,8 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+// card css ------
 
 .card-trip {
   overflow: hidden;
@@ -120,21 +124,6 @@ body {
   text-align: center;
 }
 
-#carouselExampleIndicators {
-  // height: 100%;
-}
-
-.carousel-inner {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-//grid
-
-.reviews-container{
-  margin-top: 200px;
-}
 
 .slogan{
   margin-top: 100px;
@@ -143,6 +132,9 @@ body {
 .big-text {
   font-size: 7em;
 }
+
+// tv grid feature -------
+
 .grid-box-long {
   width: 100%;
   height: 420px;
@@ -192,8 +184,8 @@ body {
   padding: 0;
 }
 .grid-bottom {
-  background-size: cover;
-  background-position: center;
+  // background-size: cover;
+  // background-position: center;
   position: relative;
   width: 100%;
   height: 290px;
@@ -262,4 +254,40 @@ body {
     opacity: 0.5;
   }
 }
+
+// review carousel -------
+
+#carouselExampleIndicators {
+  height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.review-container {
+  height: 24vh;
+  background-color: #F2F2F2;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+// brand card design --------------
+
+.card-category {
+  background-size: cover;
+  // background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
 

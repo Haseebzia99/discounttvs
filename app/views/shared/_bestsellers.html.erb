@@ -1,34 +1,19 @@
 <% @best_sellers.each do |tv| %>
 <%= link_to tv_path(tv) do %>
-  <div class="row">
-      <div class="card d-flex justify-content-around" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title"><%= tv.name %></h5>
-          <p class="card-text"><%= tv.description %>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><%= tv.price %></li>
-          <li class="list-group-item"><%= tv.size %></li>
-          <li class="list-group-item"><%= Date.today %></li>
-        </ul>
-        <!-- <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div> -->
-      </div>
-    <% end %>
-    <% end %>
-  </div>
 
-
-  <!--  <div class="mydiv">
-    <div class="tv">
-      <div class="tv-infos">
-          <h2><%#= tv.name %></h2>
-          <h2><%#= tv.size %>"</h2>
-          <h2>£<%#= tv.price %></h2>
-        <%#= Date.today %>
-      </div>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%= tv.name %></h5>
+      <p class="card-text"><%= tv.description %>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
-  </div> -->
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><%= tv.price %></li>
+      <li class="list-group-item"><%= tv.size %></li>
+      <li class="list-group-item"><%= Date.today %></li>
+    </ul>
+  </div>
+<% end %>
+<% end %>
+
+
