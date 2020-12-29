@@ -3,17 +3,30 @@ form {
   // flex-direction: column;
   // border: 1px solid;
   // border-radius: 5px;
-  width: 100%;
+  width: 50%;
   // padding: 16px;
-  // margin: 0 auto;
+  margin: 0 auto;
   .input {
     background-color: #F5F8FA;
     border-radius: 2px;
     width: 100%;
     border: 1px solid #CBD7E2;
+
   }
 }
 
 .contact-heading-h5 {
   opacity: 0.4;
+}
+
+#form-button {
+  background-color: #1966AE;
+  border-radius: 4px;
+  min-width: 100px;
+  width: auto;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+  border: none;
+  // font-weight:
 }

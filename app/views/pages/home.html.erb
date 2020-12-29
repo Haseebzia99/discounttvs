@@ -96,7 +96,7 @@
     <div class="carousel-inner">
     <!-- for every review, we are going to iterate over and if its the first review, then give it the active class otherwise its not active. (needs to be active, because additional JS is being run in the background for each carosel) -->
       <% @reviews.each_with_index do |review, index| %>
-        <div class="carousel-item carclique-carosel-slide text-center <%= index == 0 ? 'active' : '' %>">
+        <div class="carousel-item discounttv-carosel-slide text-center <%= index == 0 ? 'active' : '' %>">
           <h1><%= review[:name] %></h1>
           <h2>"<%= review[:content] %>"</h2>
         </div>
