@@ -1,9 +1,10 @@
-<div class="container">
+<div class=" container mt-5">
   <h1 class="text-center">Add a new TV</h1>
   <%= simple_form_for (@tv_new) do |f| %>
   <div>
     <%= f.input :name %>
     <%= f.input :description %>
+    <%= f.input :price %>
     <%= f.input :year %>
     <%= f.input :size %>
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
