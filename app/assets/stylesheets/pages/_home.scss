@@ -51,7 +51,7 @@ body, html {
 
 .parallax {
   background-image: url('https://images.unsplash.com/photo-1567602901358-5ba00815eb15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
-  height: 20%;
+  height: 25%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -149,8 +149,7 @@ body {
   height: 100%;
   transition: all 0.5s ease-in-out;
   transform: scale(1);
-   object-fit: cover;
-
+   // object-fit: cover;
 }
 
 .grid-box-long:hover .grid-box-image-long{
@@ -173,6 +172,8 @@ body {
   height: 100%;
   transition: all 0.5s ease-in-out;
   transform: scale(1);
+
+
 }
 .box-top-right:hover .box-top-right-image{
   transform: scale(1.1);
@@ -184,7 +185,7 @@ body {
   padding: 0;
 }
 .grid-bottom {
-  // background-size: cover;
+  background-size: cover;
   // background-position: center;
   position: relative;
   width: 100%;
@@ -197,7 +198,7 @@ body {
   height: 100%;
   transition: all 0.5s ease-in-out;
   transform: scale(1);
-   object-fit: cover;
+   // object-fit: cover;
 }
 .grid-bottom:hover .grid-bottom-image{
   transform: scale(1.1);
@@ -209,7 +210,7 @@ body {
   text-align: center;
   padding-top: 10px;
   font-size: 16px;
-  color: pink;
+  color: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -220,7 +221,7 @@ body {
   font-size: 16px;
   text-align: center;
   padding-top: 10px;
-  color: red;
+  color: white;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -230,7 +231,7 @@ body {
   width: 35%;
   text-align: center;
   padding: 30px;
-  color: blue;
+  color: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -269,8 +270,11 @@ body {
 
 .review-container {
   height: 24vh;
-  background-color: #F2F2F2;
+  background-color: #FAFBFB;
   width: 100vw;
   margin: 0 auto;
+  border: 1px solid #fafafa;
 }
+
+
 
