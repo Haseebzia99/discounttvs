@@ -1,3 +1,13 @@
+.contact-title {
+font-family: gill-sans-medium;
+}
+
+.contact-heading {
+  font-family: gill-sans-light;
+}
+.contact-heading {
+  opacity: 0.5;
+}
 form {
   // display: flex;
   // flex-direction: column;
@@ -15,8 +25,8 @@ form {
   }
 }
 
-.contact-heading-h5 {
-  opacity: 0.4;
+.contact-details h6 {
+  font-family: gill-sans-light;
 }
 
 #form-button {
@@ -28,5 +38,4 @@ form {
   margin: 0 auto;
   text-align: center;
   border: none;
-  // font-weight:
 }
