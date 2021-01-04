@@ -4,10 +4,9 @@ font-family: gill-sans-medium;
 
 .contact-heading {
   font-family: gill-sans-light;
-}
-.contact-heading {
   opacity: 0.5;
 }
+
 form {
   // display: flex;
   // flex-direction: column;
@@ -18,32 +17,24 @@ form {
   margin: 0 auto;
   .input {
     background-color: #F5F8FA;
-    border-radius: 2px;
+    border-radius: 1px;
     width: 100%;
     border: 1px solid #CBD7E2;
 
   }
 }
 
-.contact-details h6 {
-  font-family: gill-sans-light;
-}
-
-#form-button {
-  background-color: #1966AE;
-  border-radius: 4px;
-  min-width: 100px;
-  width: auto;
-  padding: 10px;
-  margin: 0 auto;
-  text-align: center;
-  border: none;
-}
-
-.form--inputs {
+.form--inputs-top {
   justify-content: space-between;
 }
 
 .message--input {
   width: 100%;
 }
+
+.contact-details h6 {
+  font-family: gill-sans-light;
+}
+
+
+
