@@ -8,6 +8,8 @@
     </div>
 
     <div class="nav-btn">
+
+
       <div class="navbar-links">
         <ul>
           <li class="nav-link" style="--i: .6s">
@@ -15,6 +17,10 @@
             <div class="dropdown">
               <ul>
                 <li class="arrow"></li>
+                </li>
+                  <li class="dropdown-link">
+                  <%= link_to "All TVs", tvs_path %>
+                </li>
                 <li class="dropdown-link">
                   <%= link_to "4K", tvs_path %>
                 </li>
@@ -24,13 +30,17 @@
                 <li class="dropdown-link">
                   <%= link_to "OLED", tvs_path %>
                 </li>
-
+                <li class="dropdown-link">
+                  <%= link_to "Curved TV", tvs_path %>
+                </li>
+                 <li class="dropdown-link">
+                  <%= link_to "Frame TV", tvs_path %>
               </ul>
             </div>
           </li>
-          <li class="nav-link" style="--i: 1.4s">
-            <%= link_to 'Our Tvs', tvs_path %>
-          </li>
+         <!--  <li class="nav-link" style="--i: 1.4s">
+            <%#= link_to 'Our Tvs', tvs_path %>
+          </li> -->
           <li class="nav-link" style="--i: 1.8s">
             <%= link_to 'About Us', root_path %>
           </li>

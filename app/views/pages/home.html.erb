@@ -1,31 +1,34 @@
 <html>
-<body>
+<body>.
 
   <div class="banner mb-3">
-    <div class="slogan">
-      <h1 class="text-center">ORDER TODAY.. <strong>PAY ON DELIVERY DAY</strong></h1>
-    <div class="row justify-content-center mt-3">
-      <button type="button" class="btn btn-primary"><%= link_to "Shop Now!", tvs_path %></button>
+    <div class="slogan-box text-center">
+      <h1 class=" mb-4">ORDER TODAY.. <strong>PAY ON DELIVERY DAY</strong></h1>
+      <button type="button" class="dtv-button" ><%= link_to "Shop Now", tvs_path, class: "dtv-button"  %></button>
     </div>
-    </div>
-    <div>
-      <h2 class="text-center mt-3">Search for your new TV here</h2>
+    <div class="mt-4">
+     <!--  <h2 class="text-center mt-3">Search for your new TV here</h2> -->
       <%= render 'shared/search' %>
     </div>
   </div>
+    <div class="row justify-content-center mt-3">
+    </div>
   <div class="container mb-4">
     <div class="" data-aos="zoom-in">
-      <h2 class="grid-title-font text-center border-bottom mb-3 pb-3 mt-5 ">Choose your TV</h2>
+      <!-- <h2 class="grid-title-font text-center border-bottom mb-3 pb-3 mt-5 ">Choose your TV</h2> -->
       <div class="row wrap">
         <div class="col-lg-6 col-md-12 col-sm-12 box-long-padding">
+        <%= link_to tvs_path do %>
           <div class="grid-box-long">
             <img class="grid-box-image-long" src="https://discounttvs.co.uk/wp-content/uploads/2020/02/4K-TV.jpg" alt="">
             <div class="text-inner-box">
-              <h2>4K TV</h2>
+            <h2>4K TV</h2>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 col-md-12 col-sm-12 pl-4 box-tr-padding">
+        <% end %>
+        <div class="col-lg-6 col-md-12 col-sm-12 box-tr-padding">
+        <%= link_to tvs_path do %>
           <div class="box-top-right">
             <img class="box-top-right-image" src="https://discounttvs.co.uk/wp-content/uploads/2020/02/Curved-TV.png" alt="">
           <div class="text-inner">
@@ -33,31 +36,38 @@
           </div>
           </div>
         </div>
+        <% end %>
       </div>
       <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12">
+          <%= link_to tvs_path do %>
           <div class="grid-bottom">
             <img class="grid-bottom-image" src="https://discounttvs.co.uk/wp-content/uploads/2020/02/8K-TV.jpg" alt="">
             <div class="text-inner">
               <h2>8K TV</h2>
             </div>
           </div>
+          <% end %>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
+          <%= link_to tvs_path do %>
           <div class="grid-bottom">
             <img class="grid-bottom-image" src="https://discounttvs.co.uk/wp-content/uploads/2020/02/TheFrameTV.jpg" alt="">
             <div class="text-inner-box3">
               <h2>The Frame TV</h2>
             </div>
           </div>
+          <% end %>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12">
+          <%= link_to tvs_path do %>
           <div class="grid-bottom">
             <img class="grid-bottom-image" src="https://discounttvs.co.uk/wp-content/uploads/2020/02/OLED-TV.jpg" alt="">
             <div class="text-inner">
               <h2>OLED TV</h2>
             </div>
           </div>
+          <% end %>
         </div>
       </div>
     </div>
@@ -70,9 +80,6 @@
       <h2>We are a group of analytically minded individuals, who seek to provide a new perspective on how organisational value can be distributed.</h2>
     </div> -->
 
-  <!-- <div class="orderprocess m-3">
-    <h1 class="text-center">ORDER PROCESS</h1>
-  </div> -->
   <div class="order-process-container">
     <div class="container">
       <%= render 'shared/cardhome' %>
