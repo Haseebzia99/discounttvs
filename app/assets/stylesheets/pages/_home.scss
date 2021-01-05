@@ -19,37 +19,27 @@ body, html {
   background-position: center;
   padding: 100px 0;
   animation: fader 20s cubic-bezier(.8,0,0,.8) infinite;
-  height: 600px;
+  height: 840px;
 }
 
 .banner h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 24px;
-  font-family: gill-sans-medium;
+  font-family: gill-sans-light;
 }
 
 .banner h2 {
   color: white;
 }
 
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-family: gill-sans-bold;
-
-}
-
 .slogan-box{
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
-.trustpilot img  {
-  width: 100px;
-}
+// .trustpilot img  {
+//   width: 100px;
+// }
 
 // tv grid feature -------
 
