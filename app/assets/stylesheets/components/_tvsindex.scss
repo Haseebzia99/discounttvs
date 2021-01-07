@@ -1,34 +1,20 @@
-.tv {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  margin: 30px 0px 30px 0px;
+.tvindex-card-style a {
+  text-decoration: none;
 }
 
-.tv-index-image {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+.tv-index-product-description h5 {
+    font-size: 16px;
+    line-height: 22px;
+    color: black;
 }
 
-.tv h2 {
+.tv-index-extra-info {
   font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+  line-height: 20px;
+  color: black;
+  font-family: gill-sans-light;
 }
 
-.tv p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.tv .tv-infos {
-  padding: 16px;
-
-}
+// .bestsellers-title {
+//  font-family: gill-sans-light;
+// }

@@ -1,36 +1,40 @@
-<div class="container-form-form">
-  <div class="simple-form container">
-    <%= simple_form_for :search, url: tvs_path,  method: :get, remote: true do |f|%>
-    <div class="row">
-      <div class="col-4">
+<div class="container">
+  <div class="index-page-row">
+    <div class="filter-container col-4">
+      <%= simple_form_for :search, url: tvs_path,  method: :get, remote: true do |f|%>
         <%= f.input :name, collection: @tvs_all.map(&:name).uniq %>
         <%= f.input :size, collection: @tvs_all.map(&:size).uniq %>
         <%= f.input :year, collection: @tvs_all.map(&:year).uniq %>
         <%= f.input :price, collection: @tvs_all.map(&:price).uniq %>
-      </div>
+        <div class="d-flex justify-content-space-around text-align-center">
+          <div class="mr-5">
+            <%= f.submit "Search", class: "btn btn-secondary" %>
+          </div>
+          <div>
+            <%= link_to 'View All', tvs_path, class: 'btn btn-secondary' %>
+          </div>
+        </div>
+      <% end %>
     </div>
-
-
-
-  <div class="d-flex justify-content-space-around text-align-center">
-    <div class="mr-5">
-      <%= f.submit "Search", class: "btn btn-secondary" %>
+    <div class="col-8">
+      <%= render 'shared/tvsindex', tvs: @tvs %>
     </div>
-    <div>
-      <%= link_to 'View All', tvs_path, class: 'btn btn-secondary' %>
-    </div>
-
-  <% if current_user.try(:admin?) == true %>
-      <div class="ml-5">
-        <%= link_to 'Create Tv', new_tv_path, class: 'btn btn-secondary' %>
-      </div>
-    </div>
-  <% end %>
-
-  <% end %>
   </div>
-<div id="tvs">
-  <%= render 'shared/tvsindex', tvs: @tvs %>
-</div>
+
 
 </div>
+
+
+
+
+
+  <!-- <%# if current_user.try(:admin?) == true %>
+      <div class="ml-5">
+        <%#= link_to 'Create Tv', new_tv_path, class: 'btn btn-secondary' %>
+      </div>
+    </div>
+  <%# end %> -->
+
+
+
+
