@@ -1,5 +1,14 @@
 <div class="container">
-  <div class="index-page-row">
+  <div class="banner-container">
+  </div>
+  <div class="heading-container">
+    <p id="index-page-heading">'TV'</p>
+  </div>
+  <ul class="breadcrumbs p-3">
+    <li class="breadcrumbs">HOME /</li>
+    <li class="breadcrumbs"> ALL TVS </li>
+  </ul>
+  <div class="index-page-row pt-3">
     <div class="filter-container col-4">
       <%= simple_form_for :search, url: tvs_path,  method: :get, remote: true do |f|%>
         <%= f.input :name, collection: @tvs_all.map(&:name).uniq %>
@@ -8,7 +17,7 @@
         <%= f.input :price, collection: @tvs_all.map(&:price).uniq %>
         <div class="d-flex justify-content-space-around text-align-center">
           <div class="mr-5">
-            <%= f.submit "Search", class: "btn btn-secondary" %>
+            <%= f.submit "Search", class: "dtv-button" %>
           </div>
           <div>
             <%= link_to 'View All', tvs_path, class: 'btn btn-secondary' %>
@@ -16,12 +25,10 @@
         </div>
       <% end %>
     </div>
-    <div class="col-8">
-      <%= render 'shared/tvsindex', tvs: @tvs %>
+    <div class="product-grid col-8">
+      <%= render 'shared/tvsindex-card', tvs: @tvs %>
     </div>
   </div>
-
-
 </div>
 
 

@@ -1,12 +1,33 @@
-.index-page-row {
-  display: flex;
-  flex-wrap: wrap;
+.banner-container {
+  margin-top: 200px;
 }
 
+.heading-container {
+  text-align: center;
+  border-bottom: 1px solid lightgrey;
+  #index-page-heading{
+    font-size: 16px;
+    font-weight: 400px;
+  }
+}
 
+.breadcrumbs {
+  display: inline-block;
+  text-decoration: none;
+}
+.index-page-row {
+  display: flex;
+}
 
+.filter-container {
+  // position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
 
-
+.filter-container form {
+  max-width: 75%;
+}
 
 
 // .tv {
