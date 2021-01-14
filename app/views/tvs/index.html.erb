@@ -15,13 +15,9 @@
         <%= f.input :size, collection: @tvs_all.map(&:size).uniq %>
         <%= f.input :year, collection: @tvs_all.map(&:year).uniq %>
         <%= f.input :price, collection: @tvs_all.map(&:price).uniq %>
-        <div class="d-flex justify-content-space-around text-align-center">
-          <div class="mr-5">
-            <%= f.submit "Search", class: "dtv-button" %>
-          </div>
-          <div>
-            <%= link_to 'View All', tvs_path, class: 'btn btn-secondary' %>
-          </div>
+        <div class="d-flex justify-content-space-between ">
+          <%= f.submit "Search", class: "dtv-button" %>
+          <%= link_to 'View All', tvs_path, class: "dtv-button-light" %>
         </div>
       <% end %>
     </div>

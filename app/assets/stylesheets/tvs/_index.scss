@@ -15,18 +15,21 @@
   display: inline-block;
   text-decoration: none;
 }
+
 .index-page-row {
   display: flex;
 }
 
-.filter-container {
-  // position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-}
-
 .filter-container form {
   max-width: 75%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 120px;
+  margin-bottom: 50px;
+}
+
+.product-grid {
+  margin-bottom: 50px;
 }
 
 
