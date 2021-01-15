@@ -4,11 +4,11 @@
   <div class="heading-container">
     <p id="index-page-heading">'TV'</p>
   </div>
-  <ul class="breadcrumbs p-3">
-    <li class="breadcrumbs">HOME /</li>
-    <li class="breadcrumbs"> ALL TVS </li>
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs">HOME / ALL TVS</li>
+  <!--   <li class="breadcrumbs">ALL TVS </li> -->
   </ul>
-  <div class="index-page-row pt-3">
+  <div class="index-page-row">
     <div class="filter-container col-4">
       <%= simple_form_for :search, url: tvs_path,  method: :get, remote: true do |f|%>
         <%= f.input :name, collection: @tvs_all.map(&:name).uniq %>
@@ -25,6 +25,10 @@
       <%= render 'shared/tvsindex-card', tvs: @tvs %>
     </div>
   </div>
+</div>
+<div class="recently-viewed-container text-center  p-5">
+  <p>Recently Viewed Items</p>
+  <%= render 'shared/tvsindex-card', tvs: @tvs %>
 </div>
 
 

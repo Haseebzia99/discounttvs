@@ -14,10 +14,12 @@
 .breadcrumbs {
   display: inline-block;
   text-decoration: none;
+  padding: 8px;
 }
 
 .index-page-row {
   display: flex;
+  padding-top: 8px;
 }
 
 .filter-container form {
@@ -32,6 +34,10 @@
   margin-bottom: 50px;
 }
 
+.recently-viewed-container {
+  background-color: #F2F2F2;
+  border-top: 1px solid lightgrey;
+}
 
 // .tv {
 //   overflow: hidden;
