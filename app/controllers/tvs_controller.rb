@@ -11,6 +11,7 @@ class TvsController < ApplicationController
         @tvs = @tvs.where(key => value) if value.present?
       end
     end
+    # @recent_tvs = Tv.where(@tv.id = current)
   end
 
   def show
