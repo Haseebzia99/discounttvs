@@ -11,12 +11,16 @@
   <div class="index-page-row">
     <div class="filter-container col-4">
       <%= simple_form_for :search, url: tvs_path,  method: :get, remote: true do |f|%>
+
         <%= f.input :name, collection: @tvs_all.map(&:name).uniq %>
         <%= f.input :size, collection: @tvs_all.map(&:size).uniq %>
         <%= f.input :year, collection: @tvs_all.map(&:year).uniq %>
         <%= f.input :price, collection: @tvs_all.map(&:price).uniq %>
-        <div class="d-flex justify-content-space-between ">
+
+        <div class="text-center mb-4">
           <%= f.submit "Search", class: "dtv-button" %>
+        </div>
+        <div class="text-center">
           <%= link_to 'View All', tvs_path, class: "dtv-button-light" %>
         </div>
       <% end %>
@@ -42,7 +46,4 @@
       </div>
     </div>
   <%# end %> -->
-
-
-
 
