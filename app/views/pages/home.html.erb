@@ -98,9 +98,9 @@
     <div id="style="height:100px;background-color:transparent;font-size:18px></div>
   </div>
 
-  <div class="review-container pt-5 pb-5">
-    <div id="carouselExampleIndicators" class="carousel slide bg-transparent" data-ride="carousel">
-      <h4 class="text-center mt-2 pt-2">What our customers think</h4>
+  <div class="review-container">
+    <h4 class="text-center mt-2 mb-2">What our customers think</h4>
+    <div id="carouselExampleIndicators" class="carousel-slide bg-transparent m-3" data-ride="carousel">
       <div class="carousel-inner">
       <!-- for every review, we are going to iterate over and if its the first review, then give it the active class otherwise its not active. (needs to be active, because additional JS is being run in the background for each carosel) -->
         <% @reviews.each_with_index do |review, index| %>
