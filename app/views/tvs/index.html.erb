@@ -4,10 +4,12 @@
   <div class="heading-container">
     <p id="index-page-heading">'TV'</p>
   </div>
-  <ul class="breadcrumbs">
-    <li class="breadcrumbs">HOME / ALL TVS</li>
-  <!--   <li class="breadcrumbs">ALL TVS </li> -->
-  </ul>
+    <ol class="breadcrumbs-list">
+      <%= link_to root_path do %>
+        <li class="breadcrumbs-item-home">Home</li>
+      <% end %>
+       <li class="breadcrumbs-item"> <%= link_to "All TVs", tvs_path %></li>
+    </ol>
   <div class="index-page-row">
     <div class="filter-container col-lg-3">
       <%= simple_form_for :search, url: tvs_path,  method: :get, remote: true do |f|%>
@@ -29,8 +31,8 @@
   </div>
 </div>
 
-<div class="recently-viewed-container text-center p-5">
-
+<div class="trust-pilot-container text-center p-5">
+  <p>Trust Pilot Rating</p>
 </div>
 <div class="recently-viewed-container text-center p-5">
   <p>Recently Viewed Items</p>
