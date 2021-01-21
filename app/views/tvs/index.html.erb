@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="banner-container p-5 " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80);">
+  <div class="banner-container " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80);">
   </div>
   <div class="heading-container">
     <p id="index-page-heading">'TV'</p>
@@ -9,7 +9,7 @@
   <!--   <li class="breadcrumbs">ALL TVS </li> -->
   </ul>
   <div class="index-page-row">
-    <div class="filter-container col-3">
+    <div class="filter-container col-lg-3">
       <%= simple_form_for :search, url: tvs_path,  method: :get, remote: true do |f|%>
         <%= f.input :name, collection: @tvs_all.map(&:name).uniq %>
         <%= f.input :size, collection: @tvs_all.map(&:size).uniq %>
@@ -23,7 +23,7 @@
         </div>
       <% end %>
     </div>
-    <div class="product-grid col-9">
+    <div class="product-grid  col-lg-9">
       <%= render 'shared/tvsindex-card', tvs: @tvs %>
     </div>
   </div>
