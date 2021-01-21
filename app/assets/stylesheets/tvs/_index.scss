@@ -14,7 +14,6 @@
   }
 }
 
-
 .breadcrumbs-list {
   padding: 8px 16px;
   font-size: 0.75rem;
@@ -33,7 +32,6 @@
   }
 }
 
-
 .breadcrumbs-item::before {
   content: '/';
   float: left;
@@ -42,28 +40,11 @@
 
 .breadcrumbs-item-home {
   float: left;
-
 }
 
 .breadcrumbs-item {
   float: left;
 }
-// .breadcrumbs li{
-//   display: inline-block;
-//   text-decoration: none;
-//   padding-top: 12px;
-//   font-size: 12px;
-//   color: black;
-// }
-
-// .breadcrumbs a {
-//   color: black;
-//   text-decoration: none;
-// }
-
-// .breadcrumbs li:hover {
-//   text-decoration: underline;
-// }
 
 .index-page-row {
   display: flex;
