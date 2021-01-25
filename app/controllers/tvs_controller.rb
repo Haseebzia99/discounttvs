@@ -53,6 +53,6 @@ class TvsController < ApplicationController
   end
 
   def tv_params
-    params.require(:tv).permit(:price, :model, :size, :year, :brand, :specification, photos: [])
+    params.require(:tv).permit(:price, :model, :size, :year, :brand, :specification, :description, photos: [])
   end
 end
