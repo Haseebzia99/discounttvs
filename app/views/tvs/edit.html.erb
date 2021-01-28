@@ -1,13 +1,33 @@
-<div class="container">
-  <h1 class="text-center">Edit <%= @tv.name %> TV</h1>
+<div class="container edit-listing-container">
+  <h3 class="text-center">Edit TV: <%= @tv.name %> TV</h3>
   <%= simple_form_for (@tv) do |f| %>
-  <div>
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :year %>
-    <%= f.input :size %>
-    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-    <%= f.button :submit, class: "btn-main" %>
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <%= f.input :brand %>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <%= f.input :size %>
+    </div>
   </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <%= f.input :price %>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <%= f.input :year %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <%= f.input :description %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <%= f.input :specification %>
+    </div>
+  </div>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+    <%= f.button :submit, class: "dtv-button" %>
   <% end %>
 </div>

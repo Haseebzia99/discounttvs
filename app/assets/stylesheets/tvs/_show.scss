@@ -19,13 +19,38 @@
   margin-top: 2px;
 }
 
-// ------------------
+// ------------------ new listing
 
 .new-listing-container {
-margin-top: 150px;
-margin-bottom: 64px;
-border: 1px solid lightgrey;
-padding: 16px;
-box-shadow: 0px 0px 10px 1px   #C0C0C0;
+  margin-top: 150px;
+  margin-bottom: 64px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 0px 0px 10px 1px   #C0C0C0;
+
+    input {
+      border-radius: 6px;
+    }
+    textarea {
+      border-radius: 6px;
+    }
 }
 
+// -------------------------- edit listing
+
+.edit-listing-container {
+  margin-top: 150px;
+  margin-bottom: 64px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 0px 0px 10px 1px   #C0C0C0;
+
+    input {
+      border-radius: 6px;
+    }
+    textarea {
+      border-radius: 6px;
+    }
+}
