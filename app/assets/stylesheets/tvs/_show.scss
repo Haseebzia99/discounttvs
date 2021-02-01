@@ -19,6 +19,25 @@
   margin-top: 2px;
 }
 
+.tv-showpage-container {
+  margin-top: 30px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tv-specs {
+  margin-top: 100px;
+  position: sticky;
+  top: 90px;
+  align-self: flex-start;
+  border-left: 1px solid lightgrey;
+  min-height: 60vh;
+
+}
+
 // ------------------ new listing
 
 .new-listing-container {
