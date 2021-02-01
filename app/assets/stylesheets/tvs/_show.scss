@@ -19,6 +19,22 @@
   margin-top: 2px;
 }
 
+.tv-showpage-container {
+  margin-top: 90px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tv-specs {
+  position: sticky;
+  top: 70px;
+  align-self: flex-start;
+
+}
+
 // ------------------ new listing
 
 .new-listing-container {

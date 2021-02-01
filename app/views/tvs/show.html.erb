@@ -1,100 +1,79 @@
 <div class="container">
+  <div class="tv-showpage-container">
 
-
-<div class="row ">
-  <div class="col-8 photo-gallery">
-      <% if @tv.photos.any? %>
-      <%= cl_image_tag @tv.photos.first.key, class: "main-gallery-image", crop: :fill %>
-      <div class="scroll-row">
-        <% @tv.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, class: "scroll_image", crop: :fill %>
+    <div class="row">
+      <div class="photo-gallery col-lg-8 col-md-8 col-sm-12 ">
+        <% if @tv.photos.any? %>
+        <%= cl_image_tag @tv.photos.first.key, class: "main-gallery-image", crop: :fill %>
+        <div class="scroll-row">
+          <% @tv.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, class: "scroll_image", crop: :fill %>
+          <% end %>
+        </div>
         <% end %>
       </div>
-      <% end %>
-  </div>
-</div>
 
+      <div class="tv-specs col-lg-4 col-md-4 col-sm-12">
+        <h4>Tv name</h4>
+        <p><%= @tv.name %></p>
+        <h4>Tv size</h4>
+        <div class="dropdown mb-3 ">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Choose your size
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#"><p><%= @tv.size %>"</p></a>
+          </div>
+        </div>
+        <h4>Description</h4>
+        <p><%= @tv.description %></p>
+        <h4>Price</h4>
+        <p>£<%= @tv.price %></p>
 
-   <div class="row ">
-    <div class="mb-3">
-      <h4>Tv name</h4>
-      <p><%= @tv.name %></p>
+        <div class="checkboxes">
+          <div class="form-check form-check">
+            <input type="checkbox" class="form-check-input" id="checkbox" value="25" name="input1">
+            <label class="form-check-label" for="materialInline1">TV Recycling(£25)</label>
+          </div>
 
-      <h4>Tv size</h4>
-      <div class="dropdown mb-3 ">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Choose your size
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#"><p><%= @tv.size %>"</p></a>
+          <div class="form-check form-check">
+            <input type="checkbox" class="form-check-input" id="materialInline2" value="40">
+            <label class="form-check-label" for="materialInline2">Full TV Installation and set up (£40)</label>
+          </div>
         </div>
       </div>
 
-
-      <h4>Description</h4>
-      <p><%= @tv.description %></p>
-      <h4>Price</h4>
-      <p>£<%= @tv.price %></p>
-
-
-<div class="checkboxes">
-  <div class="form-check form-check">
-    <input type="checkbox" class="form-check-input" id="checkbox" value="25" name="input1">
-    <label class="form-check-label" for="materialInline1">TV Recycling(£25)</label>
-  </div>
-
-  <div class="form-check form-check">
-      <input type="checkbox" class="form-check-input" id="materialInline2" value="40">
-      <label class="form-check-label" for="materialInline2">Full TV Installation and set up (£40)</label>
-  </div>
-</div>
-
-<!-- <script>
-document.getElementById('checkbox').onchange = function()  {
-  document.getElementById('input1').setAttribute(this.checked ? <%= @tv.price %> : <%= @tv.price %>)
-}
-</script>
- -->
-
     </div>
-  </div>
 
 
+  <!-- <script>
+  document.getElementById('checkbox').onchange = function()  {
+    document.getElementById('input1').setAttribute(this.checked ? <%= @tv.price %> : <%= @tv.price %>)
+  }
+  </script>
+   -->
 
+    <div>
+      <%= link_to 'Continue Shopping', tvs_path, class: "btn btn-primary"%>
+      <% if current_user.try(:admin?) == true %>
+      <%= link_to "Edit", edit_tv_path(@tv), class: "btn btn-primary"%>
+      <%= link_to "Delete", tv_path(@tv), class: "btn btn-primary", method: :delete, data: { confirm: "Are you sure?" } %>
+      <% end %>
+    </div>
 
-
-
-
-
-
-<div>
-  <%= link_to 'Continue Shopping', tvs_path, class: "btn btn-primary"%>
-  <% if current_user.try(:admin?) == true %>
-  <%= link_to "Edit", edit_tv_path(@tv), class: "btn btn-primary"%>
-  <%= link_to "Delete", tv_path(@tv), class: "btn btn-primary", method: :delete, data: { confirm: "Are you sure?" } %>
-  <% end %>
-</div>
-
-
-<% if @similar_tvs %>
-  <div class="bg-light">
-    <div class="container pt-3 pb-4">
-      <h2>Customers also viewed</h2>
-        <div class="row">
-          <%= render 'shared/tvcard' %>
+    <% if @similar_tvs %>
+      <div class="bg-light">
+        <div class="container pt-3 pb-4">
+          <h2>Customers also viewed</h2>
+          <div class="row">
+            <%= render 'shared/similartv-card' %>
+          </div>
         </div>
-    </div>
+      </div>
+    <% end %>
+
   </div>
-<% end %>
-
-
 </div>
-
-
-
-
-
-
 
 
 <script>
