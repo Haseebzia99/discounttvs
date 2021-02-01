@@ -20,7 +20,7 @@
 }
 
 .tv-showpage-container {
-  margin-top: 90px;
+  margin-top: 30px;
 }
 
 .row {
@@ -29,9 +29,12 @@
 }
 
 .tv-specs {
+  margin-top: 100px;
   position: sticky;
-  top: 70px;
+  top: 90px;
   align-self: flex-start;
+  border-left: 1px solid lightgrey;
+  min-height: 60vh;
 
 }
 
